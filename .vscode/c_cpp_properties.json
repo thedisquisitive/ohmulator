@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/include",  // Your project's include folder
+                "${workspaceFolder}/src",      // If you also include headers in src
+                "c:/msys64/mingw64/include",            // Include path for MSYS2/MinGW
+                "c:/msys64/usr/include"                 // For any other system headers (optional)
+            ],
+            "defines": [],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "C:/msys64/mingw64/bin/g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
