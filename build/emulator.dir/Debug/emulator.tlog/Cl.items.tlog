@@ -1,0 +1,15 @@
+C:\Projects\ohmulator\src\components\Capacitor.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Capacitor.obj
+C:\Projects\ohmulator\src\components\Diode.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Diode.obj
+C:\Projects\ohmulator\src\components\Inductor.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Inductor.obj
+C:\Projects\ohmulator\src\components\LED.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\LED.obj
+C:\Projects\ohmulator\src\components\Potentiometer.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Potentiometer.obj
+C:\Projects\ohmulator\src\components\Resistor.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Resistor.obj
+C:\Projects\ohmulator\src\components\Switch.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Switch.obj
+C:\Projects\ohmulator\src\components\Transistor.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Transistor.obj
+C:\Projects\ohmulator\src\components\Wire.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Wire.obj
+C:\Projects\ohmulator\src\core\Circuit.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Circuit.obj
+C:\Projects\ohmulator\src\core\Component.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Component.obj
+C:\Projects\ohmulator\src\core\ComponentFactory.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\ComponentFactory.obj
+C:\Projects\ohmulator\src\main.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\main.obj
+C:\Projects\ohmulator\src\utils\Logger.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\Logger.obj
+C:\Projects\ohmulator\src\utils\MathUtils.cpp;C:\Projects\ohmulator\build\emulator.dir\Debug\MathUtils.obj

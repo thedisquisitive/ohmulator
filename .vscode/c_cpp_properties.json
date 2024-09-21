@@ -4,6 +4,9 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/include",  // Your project's include folder
+                "${workspaceFolder}/include/components",
+                "${workspaceFolder}/include/core",
+                "${workspaceFolder}/include/utils",
                 "${workspaceFolder}/src",      // If you also include headers in src
                 "c:/msys64/mingw64/include",            // Include path for MSYS2/MinGW
                 "c:/msys64/usr/include"                 // For any other system headers (optional)

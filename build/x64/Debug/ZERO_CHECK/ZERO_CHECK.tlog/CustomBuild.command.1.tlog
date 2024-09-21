@@ -1,0 +1,10 @@
+^C:\PROJECTS\OHMULATOR\BUILD\CMAKEFILES\9049D3CF6B210CCBCB0A2765DC52343F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Projects/ohmulator -BC:/Projects/ohmulator/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Projects/ohmulator/build/Ohmulator.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

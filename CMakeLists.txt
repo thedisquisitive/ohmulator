@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Add executable for the main emulator
-file(GLOB_RECURSE EMULATOR_SOURCES "src/*.cpp")
+file(GLOB_RECURSE EMULATOR_SOURCES "src/*.cpp" "main.cpp")
 add_executable(emulator ${EMULATOR_SOURCES})
 
 # Include directories for the emulator
