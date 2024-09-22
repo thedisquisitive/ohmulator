@@ -13,6 +13,12 @@
     <ClCompile Include="C:\Projects\ohmulator\src\components\LED.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\MagneticField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\PickupCoil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Projects\ohmulator\src\components\Potentiometer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -23,6 +29,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Projects\ohmulator\src\components\Transistor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\VibratingString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Projects\ohmulator\src\components\Wire.cpp">

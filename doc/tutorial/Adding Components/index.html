@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator Tutorial: Adding a New Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        code {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        a {
+            color: #0275d8;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ohmulator Tutorial: Adding a New Component</h1>
+
+    <p>This tutorial will guide you through adding a new component to the <strong>Ohmulator</strong> library. We'll use a <em>Capacitor</em> as an example, but you can follow similar steps for other components.</p>
+
+    <h2>Step 1: Create the Header File</h2>
+    <p>Start by creating a header file for your new component in the <code>include</code> folder. In this example, we'll create <code>Capacitor.h</code>.</p>
+    <pre><code>
+// Capacitor.h
+#ifndef CAPACITOR_H
+#define CAPACITOR_H
+
+#include "Component.h"
+
+class Capacitor : public Component {
+public:
+    Capacitor(double capacitance);
+
+    // Override the applyVoltages function to handle capacitor behavior
+    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
+
+    // Return the voltage across the capacitor
+    double output() const override;
+
+    // Visualize the component (e.g., for logging)
+    std::string visualize() const override;
+
+    // Return the name of the component
+    std::string getName() const override;
+
+private:
+    double capacitance;  // Capacitance in Farads
+    double charge;       // Stored charge (Q = C * V)
+};
+
+#endif // CAPACITOR_H
+    </code></pre>
+
+    <h2>Step 2: Implement the Component Logic</h2>
+    <p>Next, create the corresponding <code>Capacitor.cpp</code> file in the <code>src</code> directory and implement the logic for your component.</p>
+    <pre><code>
+// Capacitor.cpp
+#include "Capacitor.h"
+#include <string>
+
+Capacitor::Capacitor(double capacitance)
+    : capacitance(capacitance), charge(0) {}
+
+void Capacitor::applyVoltages(double inputVoltage, double groundVoltage) {
+    double voltageAcross = inputVoltage - groundVoltage;
+    charge = capacitance * voltageAcross;  // Q = C * V
+}
+
+double Capacitor::output() const {
+    return charge / capacitance;  // V = Q / C
+}
+
+std::string Capacitor::visualize() const {
+    return "Capacitor (" + std::to_string(capacitance) + " Farads)";
+}
+
+std::string Capacitor::getName() const {
+    return "Capacitor";
+}
+    </code></pre>
+
+    <h2>Step 3: Register the Component in the Factory</h2>
+    <p>Now, to allow the <code>ComponentFactory</code> to create instances of your new component, register it in the factory. Open <code>ComponentFactory.cpp</code> and add the registration code.</p>
+    <pre><code>
+// Inside ComponentFactory.cpp
+
+// In the constructor or initialization function:
+ComponentFactory::instance().registerComponent("Capacitor", []() {
+    return std::make_unique<Capacitor>(1e-6);  // Default to a 1 µF capacitor
+});
+    </code></pre>
+
+    <h2>Step 4: Use the New Component in Main</h2>
+    <p>You can now create and use your new capacitor component in <code>main.cpp</code>. Here's how to instantiate a capacitor and apply voltages to it:</p>
+    <pre><code>
+// Inside main.cpp
+
+#include "Capacitor.h"
+#include "ComponentFactory.h"
+#include <iostream>
+
+int main() {
+    // Create a capacitor with 1 µF capacitance
+    auto capacitor = ComponentFactory::instance().createComponent("Capacitor");
+
+    // Apply a voltage to the capacitor
+    capacitor->applyVoltages(5.0, 0);  // Apply 5V with ground at 0V
+
+    // Output the result
+    std::cout << capacitor->visualize() << ": Voltage = " << capacitor->output() << " V" << std::endl;
+
+    return 0;
+}
+    </code></pre>
+
+    <h2>Step 5: Compile and Run</h2>
+    <p>After adding your new component, rebuild your project to ensure everything is linked correctly. If you are using CMake, you can rebuild the project by running:</p>
+    <pre><code>
+mkdir build
+cd build
+cmake ..
+make
+./emulator  # Or whatever your executable name is
+    </code></pre>
+
+    <h2>Conclusion</h2>
+    <p>Congratulations! You've successfully added a new component to the Ohmulator library. You can repeat this process to add more components, such as inductors, resistors, or even more complex devices.</p>
+
+    <p>For further customization or advanced components, explore the existing components in the library to see how different behaviors are modeled.</p>
+
+    <h3>Useful Links</h3>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Capacitor" target="_blank">Learn more about capacitors</a></li>
+        <li><a href="https://cmake.org/" target="_blank">CMake Documentation</a></li>
+    </ul>
+</body>
+</html>

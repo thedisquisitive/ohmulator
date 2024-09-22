@@ -336,10 +336,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClCompile Include="C:\Projects\ohmulator\src\components\Diode.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\components\Inductor.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\components\LED.cpp" />
+    <ClCompile Include="C:\Projects\ohmulator\src\components\MagneticField.cpp" />
+    <ClCompile Include="C:\Projects\ohmulator\src\components\PickupCoil.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\components\Potentiometer.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\components\Resistor.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\components\Switch.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\components\Transistor.cpp" />
+    <ClCompile Include="C:\Projects\ohmulator\src\components\VibratingString.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\components\Wire.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\core\Circuit.cpp" />
     <ClCompile Include="C:\Projects\ohmulator\src\core\Component.cpp" />

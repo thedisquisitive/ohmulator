@@ -1,27 +1,23 @@
 #include <iostream>
-#include <memory>
-#include "LED.h"
-#include "Switch.h"
-#include "Potentiometer.h"
+#include "PickupCoil.h"
+#include "VibratingString.h"
+#include "MagneticField.h"
 
 int main() {
-    // Create components
-    auto led = std::make_shared<LED>(2.0);  // LED with 2V forward voltage
-    auto basicSwitch = std::make_shared<Switch>(true);  // Switch initially on
-    auto potentiometer = std::make_shared<Potentiometer>(10000);  // 10k Ohm potentiometer
+    // Create a magnetic field with base strength
+    MagneticField magneticField(1.0);
 
-    // Set potentiometer position to 50%
-    potentiometer->setPosition(0.5);
+    // Simulate a vibrating string (e.g., A4 note, 440 Hz, with moderate amplitude)
+    VibratingString string(440.0, 0.01);  // 440 Hz and 0.01 m amplitude
 
-    // Apply voltages
-    basicSwitch->applyVoltages(5.0, 0);  // Apply 5V to the switch
-    potentiometer->applyVoltages(basicSwitch->output(), 0);  // Apply switch output to potentiometer
-    led->applyVoltages(potentiometer->output(), 0);  // Apply potentiometer output to LED
+    // Create the pickup coil
+    PickupCoil pickup(100, magneticField, string);  // 100mH inductance
 
-    // Output results
-    std::cout << basicSwitch->visualize() << ": Output = " << basicSwitch->output() << " V\n";
-    std::cout << potentiometer->visualize() << ": Output = " << potentiometer->output() << " V\n";
-    std::cout << led->visualize() << ": Current = " << led->output() << " A\n";
+    // Simulate the string vibrating over time and apply voltages
+    for (double time = 0; time <= 0.01; time += 0.001) {
+        pickup.applyVoltages(time);  // Pass time as the "input voltage" for the simulation
+        std::cout << pickup.visualize() << std::endl;
+    }
 
     return 0;
 }
