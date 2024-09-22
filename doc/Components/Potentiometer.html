@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: Potentiometer Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Potentiometer Component</h1>
+
+<p>The <strong>Potentiometer</strong> class simulates a variable resistor where the resistance can be adjusted by changing the wiper position.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class Potentiometer : public Component {
+public:
+    Potentiometer(double maxResistance);
+
+    void setPosition(double position);  // Set wiper position (0 to 1)
+
+    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
+    double output() const override;
+    std::string visualize() const override;
+    std::string getName() const override;
+
+private:
+    double maxResistance;
+    double wiperPosition;  // Position of the wiper (0 = minimum, 1 = maximum)
+    double voltageAtWiper;  // Voltage at the wiper
+};
+</code></pre>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>setPosition</strong>: Adjusts the wiper position between 0 and 1 to modify the output voltage.</li>
+    <li><strong>applyVoltages</strong>: Applies voltages across the potentiometer, simulating the output at the wiper.</li>
+</ul>
+
+</body>
+</html>

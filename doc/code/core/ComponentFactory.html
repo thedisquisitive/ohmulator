@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: Component Factory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ohmulator: Component Factory</h1>
+
+<p>The <strong>ComponentFactory</strong> class in Ohmulator is responsible for dynamically creating components at runtime. It allows users to create components without explicitly instantiating them, making the system more extensible.</p>
+
+<h2>Overview</h2>
+<p>The <code>ComponentFactory</code> uses a singleton pattern to ensure there is only one instance managing all components. Components can be registered in the factory, and new instances can be created based on their string identifiers.</p>
+
+<h2>ComponentFactory Class</h2>
+<pre><code>
+class ComponentFactory {
+public:
+    static ComponentFactory& instance();
+    
+    using ComponentCreator = std::function<std::unique_ptr<Component>()>;
+
+    void registerComponent(const std::string& name, ComponentCreator creator);
+    std::unique_ptr<Component> createComponent(const std::string& name);
+
+private:
+    std::map<std::string, ComponentCreator> componentMap;
+    ComponentFactory() = default;
+};
+</code></pre>
+
+<h3>Methods</h3>
+<ul>
+    <li><strong>registerComponent</strong>: Registers a new component in the factory by name.</li>
+    <li><strong>createComponent</strong>: Creates an instance of a component by looking it up by name in the registry.</li>
+</ul>
+
+<h2>Example</h2>
+<pre><code>
+// Registering a component in ComponentFactory
+ComponentFactory::instance().registerComponent("Resistor", []() {
+    return std::make_unique<Resistor>(1000);  // 1k Ohm resistor
+});
+</code></pre>
+
+</body>
+</html>

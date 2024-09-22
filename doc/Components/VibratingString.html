@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: VibratingString Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>VibratingString Component</h1>
+
+<p>The <strong>VibratingString</strong> class simulates the motion of a vibrating string, such as a guitar string, oscillating in a sinusoidal pattern.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class VibratingString {
+public:
+    VibratingString(double frequency, double amplitude);
+
+    // Update the string position over time (sinusoidal vibration)
+    double updatePosition(double time) const;
+
+private:
+    double frequency;  // Frequency of vibration (pitch of the string)
+    double amplitude;  // Amplitude of vibration (how strong the pluck is)
+};
+</code></pre>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>updatePosition</strong>: Returns the current position of the string based on time, simulating sinusoidal motion.</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: Capacitor Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Capacitor Component</h1>
+
+<p>The <strong>Capacitor</strong> class simulates the behavior of a capacitor, which stores electrical charge and releases it over time.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class Capacitor : public Component {
+public:
+    Capacitor(double capacitance);
+    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
+    double output() const override;
+    std::string visualize() const override;
+    std::string getName() const override;
+
+private:
+    double capacitance;
+    double charge;
+};
+</code></pre>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>applyVoltages</strong>: Simulates the charging and discharging behavior based on the input voltage.</li>
+    <li><strong>output</strong>: Returns the current voltage across the capacitor.</li>
+    <li><strong>visualize</strong>: Provides a string representation of the capacitor state.</li>
+</ul>
+
+</body>
+</html>

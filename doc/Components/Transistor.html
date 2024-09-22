@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: Transistor Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Transistor Component</h1>
+
+<p>The <strong>Transistor</strong> class simulates both N-type and P-type transistors, which are used to control current flow based on the input voltages at the gate, source, and drain terminals.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class Transistor : public Component {
+public:
+    enum class Type { NType, PType };
+
+    Transistor(Type type, double thresholdVoltage);
+    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
+    double output() const override;
+    std::string visualize() const override;
+    std::string getName() const override;
+
+private:
+    Type type;
+    double thresholdVoltage;
+    bool conducting;
+    double gateVoltage;
+    double sourceVoltage;
+    double drainVoltage;
+};
+</code></pre>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>applyVoltages</strong>: Simulates the transistor behavior based on input voltages.</li>
+    <li><strong>output</strong>: Returns the current through the transistor.</li>
+    <li><strong>visualize</strong>: Provides a string representation of whether the transistor is conducting.</li>
+</ul>
+
+</body>
+</html>

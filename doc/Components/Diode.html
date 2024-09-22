@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: Diode Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Diode Component</h1>
+
+<p>The <strong>Diode</strong> class simulates the behavior of a diode, which allows current to flow in one direction when the input voltage exceeds a threshold.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class Diode : public Component {
+public:
+    Diode(double forwardVoltage);
+    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
+    double output() const override;
+    std::string visualize() const override;
+    std::string getName() const override;
+
+private:
+    double forwardVoltage;
+    bool conducting;
+    double current;
+    double resistance;
+};
+</code></pre>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>applyVoltages</strong>: Simulates the diode behavior when forward biased.</li>
+    <li><strong>output</strong>: Returns the current voltage across the diode.</li>
+    <li><strong>visualize</strong>: Provides a string representation of the diode state.</li>
+</ul>
+
+</body>
+</html>

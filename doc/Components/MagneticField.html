@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: MagneticField Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #272822;
+            color: #f8f8f2;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>MagneticField Component</h1>
+
+<p>The <strong>MagneticField</strong> class simulates a static magnetic field, such as the one produced by a magnet in a guitar pickup.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class MagneticField {
+public:
+    MagneticField(double strength);
+    
+    // Simulate the field strength based on distance from the string
+    double calculateFieldStrength(double distance) const;
+
+private:
+    double strength;  // Base strength of the magnetic field
+};
+</code></pre>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>calculateFieldStrength</strong>: Calculates the magnetic field strength at a specific distance from the source.</li>
+</ul>
+
+</body>
+</html>
