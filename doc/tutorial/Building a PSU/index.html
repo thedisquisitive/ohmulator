@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a PSU - Ohmulator Tutorial</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <header class="text-center">
+        <h1>Building a Power Supply Unit (PSU)</h1>
+        <p class="lead">In this tutorial, we will build a PSU step by step using basic Ohmulator components.</p>
+    </header>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>A Power Supply Unit (PSU) converts AC power from the mains to DC power, which is suitable for electronic components. By combining an AC power source, a rectifier, a smoothing capacitor, and additional components, you can build your own PSU in Ohmulator.</p>
+    </section>
+
+    <section>
+        <h2>Components You'll Need</h2>
+        <ul>
+            <li><a href="../../Components/ACPowerSource.html">AC Power Source</a></li>
+            <li><a href="../../Components/Rectifier.html">Rectifier (Full-Wave)</a></li>
+            <li><a href="../../Components/Capacitor.html">Capacitor (for smoothing)</a></li>
+            <li><a href="../../Components/Switch.html">Switch (to control power)</a></li>
+            <li><a href="../../Components/Wire.html">Wire (to connect components)</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Step 1: Setting up the AC Power Source</h2>
+        <p>We start by creating an <strong>AC Power Source</strong>. This simulates the input power from the mains, typically providing alternating current at a certain voltage and frequency.</p>
+        <pre><code>
+// Create an AC power source (230V, 50Hz)
+ACPowerSource acSource(230, 50);
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Step 2: Creating the Full-Wave Rectifier</h2>
+        <p>Next, we need to convert the AC voltage into a pulsating DC voltage. We use a <strong>Full-Wave Rectifier</strong> to achieve this. The rectifier consists of diodes that allow current to pass in one direction only, converting both halves of the AC waveform into DC.</p>
+        <pre><code>
+// Create the rectifier
+Rectifier rectifier;
+
+// Apply AC voltage from the power source to the rectifier
+rectifier.applyVoltages(acSource.output(time));
+        </code></pre>
+        <p>At this point, the output is still pulsating DC, which means it fluctuates and needs smoothing.</p>
+    </section>
+
+    <section>
+        <h2>Step 3: Smoothing the Output with a Capacitor</h2>
+        <p>To create a steady DC output, we smooth the pulsating DC using a <strong>Capacitor</strong>. The capacitor stores energy during the peaks and releases it during the troughs, reducing the ripple in the output voltage.</p>
+        <pre><code>
+// Create a smoothing capacitor (1000 µF)
+Capacitor smoothingCap(1000);
+
+// Smooth the rectified DC output
+double smoothedVoltage = smoothingCap.smooth(rectifier.output());
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Step 4: Adding a Switch for Control</h2>
+        <p>To give the PSU control, we add a <strong>Switch</strong> to turn the PSU on and off. This simulates the power control functionality of a real PSU.</p>
+        <pre><code>
+// Create a switch to control the PSU
+Switch powerSwitch;
+
+// Turn on the PSU
+powerSwitch.setState(true);
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Step 5: Connecting Components with Wires</h2>
+        <p>Finally, we need to connect all of our components using <strong>Wires</strong>. Wires allow current to flow between the power source, rectifier, capacitor, and the switch.</p>
+        <pre><code>
+// Connect the components with wires
+Wire wire1, wire2, wire3;
+
+// Wire the AC source to the rectifier
+wire1.connect(&acSource, &rectifier);
+
+// Wire the rectifier to the capacitor
+wire2.connect(&rectifier, &smoothingCap);
+
+// Wire the capacitor to the load or output terminal
+wire3.connect(&smoothingCap, &outputLoad);
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Step 6: Testing the PSU</h2>
+        <p>Now that we’ve assembled the PSU using basic components, we can test its output. You can check the output voltage after rectification and smoothing by calling the relevant functions.</p>
+        <pre><code>
+    // Get the smoothed DC output voltage
+    double dcOutput = smoothingCap.output();
+    std::cout << "DC Output Voltage: " << dcOutput << "V" << std::endl;
+        </code></pre>
+    
+        <p><strong>Expected Output:</strong></p>
+        <p>After smoothing the rectified voltage, the output should be a stable DC voltage with minimal ripple. Here's an example of what the expected output could look like:</p>
+    
+        <pre><code>
+    // Example output:
+    DC Output Voltage: 218.4V
+        </code></pre>
+    
+        <p>The exact value of the output voltage will depend on the AC power source's input voltage, the rectifier's characteristics, and the capacitor's size. In this case, a 230V AC input at 50Hz and a 1000 µF smoothing capacitor should produce an output close to 218V after rectification and smoothing. You can adjust the capacitor value to see how it affects the ripple in the output voltage.</p>
+    </section>
+    
+
+    <section>
+        <h2>Conclusion</h2>
+        <p>In this tutorial, we built a simple PSU using Ohmulator’s basic components like the AC power source, rectifier, capacitor, and switch. Now that you know how to combine components, you can experiment with different configurations, add more features (like voltage regulators or protection circuits), and simulate more complex power systems.</p>
+    </section>
+
+    <footer class="text-center">
+        <p>Happy simulating! <a href="../../index.html">Back to Documentation</a></p>
+    </footer>
+</div>
+
+</body>
+</html>

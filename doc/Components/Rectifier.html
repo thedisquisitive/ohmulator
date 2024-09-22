@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: Rectifier Component</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h1>Rectifier Component</h1>
+
+<p>The <strong>Rectifier</strong> class simulates a full-wave rectifier, converting alternating current (AC) to pulsating direct current (DC).</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class Rectifier : public Component {
+public:
+    Rectifier();
+
+    void applyVoltages(double acInput, double groundVoltage = 0) override;
+    double output() const override;  // Returns rectified DC output
+    std::string visualize() const override;
+    std::string getName() const override;
+
+private:
+    Diode diodes[4];  // Four diodes for full-wave rectification
+    double dcOutput;  // The rectified output voltage
+};
+</code></pre>
+
+<h2>Constructor</h2>
+<ul>
+    <li><strong>Rectifier</strong>: Initializes a full-wave rectifier using four diodes.</li>
+</ul>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>applyVoltages</strong>: Applies AC input voltage and simulates the rectification process.</li>
+    <li><strong>output</strong>: Returns the rectified DC voltage.</li>
+    <li><strong>visualize</strong>: Provides a string representation of the rectifier's state.</li>
+</ul>
+
+<h2>Usage Example</h2>
+<pre><code>
+Rectifier rectifier;
+rectifier.applyVoltages(acSource.output(time));
+double dcVoltage = rectifier.output();
+</code></pre>
+
+<h2>Behavior</h2>
+<p>The rectifier takes an AC input and converts it into pulsating DC. It is typically used in AC to DC power supply units.</p>
+
+</body>
+</html>

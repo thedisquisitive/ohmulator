@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: AC Power Source</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h1>AC Power Source Component</h1>
+
+<p>The <strong>ACPowerSource</strong> class simulates an alternating current (AC) power source, providing a sinusoidal voltage over time.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class ACPowerSource : public Component {
+public:
+    ACPowerSource(double amplitude, double frequency);
+
+    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
+    double output() const override;
+    double output(double time) const;  // Time-varying AC voltage
+    std::string visualize() const override;
+    std::string getName() const override;
+
+private:
+    double amplitude;  // Peak voltage
+    double frequency;  // Frequency of the AC signal (Hz)
+    mutable double currentOutput;  // Store the current output voltage
+};
+</code></pre>
+
+<h2>Constructor</h2>
+<ul>
+    <li><strong>ACPowerSource</strong>: Initializes the AC power source with a given peak voltage and frequency.</li>
+</ul>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>output(double time)</strong>: Returns the AC voltage at a given time, simulating a sinusoidal waveform.</li>
+    <li><strong>output()</strong>: Returns the most recent output voltage, updated by the time-based output method.</li>
+    <li><strong>visualize()</strong>: Provides a string representation of the AC source.</li>
+</ul>
+
+<h2>Usage Example</h2>
+<pre><code>
+ACPowerSource acSource(230, 50);  // 230V peak, 50Hz frequency
+double acVoltage = acSource.output(0.02);  // Get voltage at time 0.02s
+</code></pre>
+
+<h2>Behavior</h2>
+<p>The AC power source generates a sinusoidal voltage over time. It is typically used in circuits requiring an alternating current, such as rectifiers for converting AC to DC.</p>
+
+</body>
+</html>

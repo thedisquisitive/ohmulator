@@ -3,55 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmulator: Capacitor Component</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        pre {
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-        }
-    </style>
+    <title>Capacitor - Ohmulator Documentation</title>
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>Capacitor Component</h1>
+<div class="container">
+    <header>
+        <h1>Capacitor</h1>
+        <p>A capacitor is a passive component that stores energy in an electric field.</p>
+    </header>
 
-<p>The <strong>Capacitor</strong> class simulates the behavior of a capacitor, which stores electrical charge and releases it over time.</p>
+    <section>
+        <h2>Overview</h2>
+        <p>Capacitors are used to smooth voltage fluctuations, store energy, and filter signals in circuits. The capacitance determines the amount of electric charge stored for a given voltage.</p>
+    </section>
 
-<h2>Class Definition</h2>
-<pre><code>
-class Capacitor : public Component {
-public:
-    Capacitor(double capacitance);
-    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
-    double output() const override;
-    std::string visualize() const override;
-    std::string getName() const override;
+    <section>
+        <h2>Parameters</h2>
+        <ul>
+            <li><strong>Capacitance:</strong> The value in Farads, e.g., 1000µF.</li>
+            <li><strong>Voltage Rating:</strong> The maximum voltage the capacitor can handle.</li>
+        </ul>
+    </section>
 
-private:
-    double capacitance;
-    double charge;
-};
-</code></pre>
+    <section>
+        <h2>Methods</h2>
+        <ul>
+            <li><code>applyVoltages(double inputVoltage, double groundVoltage)</code></li>
+            <li><code>output() const</code></li>
+            <li><code>visualize() const</code></li>
+            <li><code>getName() const</code></li>
+        </ul>
+    </section>
 
-<h2>Methods</h2>
-<ul>
-    <li><strong>applyVoltages</strong>: Simulates the charging and discharging behavior based on the input voltage.</li>
-    <li><strong>output</strong>: Returns the current voltage across the capacitor.</li>
-    <li><strong>visualize</strong>: Provides a string representation of the capacitor state.</li>
-</ul>
+    <section>
+        <h2>Example</h2>
+        <pre><code>
+// Create a 1000µF capacitor
+Capacitor smoothingCap(1000);
+circuit.addComponent(&smoothingCap);
+std::cout << "Output: " << smoothingCap.output() << std::endl;
+        </code></pre>
+    </section>
+
+    <footer>
+        <p><a href="../index.html">Back to Documentation</a></p>
+    </footer>
+</div>
 
 </body>
 </html>

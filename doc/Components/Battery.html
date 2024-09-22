@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diode - Ohmulator Documentation</title>
+    <title>Battery - Ohmulator Documentation</title>
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Diode</h1>
-        <p>A diode allows current to flow in one direction, preventing reverse flow.</p>
+        <h1>Battery</h1>
+        <p>A battery provides a constant voltage and stores energy to power circuits.</p>
     </header>
 
     <section>
         <h2>Overview</h2>
-        <p>Diodes are used in circuits to control the direction of current. They are commonly used in rectification and protection circuits.</p>
+        <p>Batteries are key power sources in circuits, providing a steady DC voltage. Batteries in Ohmulator have parameters like voltage and capacity (in mAh).</p>
     </section>
 
     <section>
         <h2>Parameters</h2>
         <ul>
-            <li><strong>Forward Voltage:</strong> The minimum voltage required for current to flow through the diode.</li>
+            <li><strong>Voltage:</strong> The constant voltage provided by the battery.</li>
+            <li><strong>Capacity:</strong> The amount of energy stored, measured in milliamp hours (mAh).</li>
         </ul>
     </section>
 
     <section>
         <h2>Methods</h2>
         <ul>
-            <li><code>applyVoltages(double inputVoltage, double groundVoltage)</code></li>
+            <li><code>applyVoltages(double loadVoltage, double groundVoltage)</code></li>
             <li><code>output() const</code></li>
+            <li><code>discharge(double loadCurrent)</code></li>
             <li><code>visualize() const</code></li>
             <li><code>getName() const</code></li>
         </ul>
@@ -39,10 +41,10 @@
     <section>
         <h2>Example</h2>
         <pre><code>
-// Create a diode with 0.7V forward voltage
-Diode rectifierDiode(0.7);
-circuit.addComponent(&rectifierDiode);
-std::cout << "Output: " << rectifierDiode.output() << std::endl;
+// Create a 5V battery with 2000mAh capacity
+Battery batt(5.0, 2000);
+circuit.addComponent(&batt);
+std::cout << "Output: " << batt.output() << std::endl;
         </code></pre>
     </section>
 

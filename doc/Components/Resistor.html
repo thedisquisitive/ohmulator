@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diode - Ohmulator Documentation</title>
+    <title>Resistor - Ohmulator Documentation</title>
     <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 
 <div class="container">
     <header>
-        <h1>Diode</h1>
-        <p>A diode allows current to flow in one direction, preventing reverse flow.</p>
+        <h1>Resistor</h1>
+        <p>A resistor limits the current flowing through a circuit by providing resistance.</p>
     </header>
 
     <section>
         <h2>Overview</h2>
-        <p>Diodes are used in circuits to control the direction of current. They are commonly used in rectification and protection circuits.</p>
+        <p>Resistors are passive components that reduce current flow, divide voltages, and dissipate energy in a circuit. The resistance value determines how much the current is reduced.</p>
     </section>
 
     <section>
         <h2>Parameters</h2>
         <ul>
-            <li><strong>Forward Voltage:</strong> The minimum voltage required for current to flow through the diode.</li>
+            <li><strong>Resistance:</strong> The value in ohms (Ω).</li>
         </ul>
     </section>
 
@@ -39,10 +39,10 @@
     <section>
         <h2>Example</h2>
         <pre><code>
-// Create a diode with 0.7V forward voltage
-Diode rectifierDiode(0.7);
-circuit.addComponent(&rectifierDiode);
-std::cout << "Output: " << rectifierDiode.output() << std::endl;
+// Create a 1kΩ resistor
+Resistor r(1000);
+circuit.addComponent(&r);
+std::cout << "Output: " << r.output() << std::endl;
         </code></pre>
     </section>
 

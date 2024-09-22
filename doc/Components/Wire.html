@@ -3,56 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmulator: Wire Component</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        pre {
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-        }
-    </style>
+    <title>Wire - Ohmulator Documentation</title>
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>Wire Component</h1>
+<div class="container">
+    <header>
+        <h1>Wire</h1>
+        <p>A wire transmits electrical signals and connects components in a circuit.</p>
+    </header>
 
-<p>The <strong>Wire</strong> class simulates a simple wire, which transmits electrical current and connects other components in a circuit.</p>
+    <section>
+        <h2>Overview</h2>
+        <p>Wires are used to connect different components in a circuit and transmit current between them. They play a fundamental role in ensuring a functional circuit.</p>
+    </section>
 
-<h2>Class Definition</h2>
-<pre><code>
-class Wire : public Component {
-public:
-    Wire();
-    void connect(bool isConnected);
-    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
-    double output() const override;
-    std::string visualize() const override;
-    std::string getName() const override;
+    <section>
+        <h2>Methods</h2>
+        <ul>
+            <li><code>connect(bool isConnected)</code></li>
+            <li><code>applyVoltages(double inputVoltage, double groundVoltage)</code></li>
+            <li><code>output() const</code></li>
+            <li><code>visualize() const</code></li>
+            <li><code>getName() const</code></li>
+        </ul>
+    </section>
 
-private:
-    double outputVoltage;
-    bool connected;
-};
-</code></pre>
+    <section>
+        <h2>Example</h2>
+        <pre><code>
+// Create a wire and connect it
+Wire wire;
+wire.connect(true);
+circuit.addComponent(&wire);
+std::cout << "Output: " << wire.output() << std::endl;
+        </code></pre>
+    </section>
 
-<h2>Methods</h2>
-<ul>
-    <li><strong>connect</strong>: Sets the state of the wire as connected or disconnected.</li>
-    <li><strong>applyVoltages</strong>: Transmits voltage across the wire.</li>
-    <li><strong>visualize</strong>: Provides a string representation of the wire state (connected or open).</li>
-</ul>
+    <footer>
+        <p><a href="../index.html">Back to Documentation</a></p>
+    </footer>
+</div>
 
 </body>
 </html>

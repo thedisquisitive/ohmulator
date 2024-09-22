@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmulator: AC to DC Power Supply</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<h1>AC to DC Power Supply Unit (PSU) Component</h1>
+
+<p>The <strong>PSU_ACDC</strong> class simulates an AC to DC power supply unit, converting AC voltage to stable DC voltage using a rectifier and smoothing capacitor.</p>
+
+<h2>Class Definition</h2>
+<pre><code>
+class PSU_ACDC {
+public:
+    PSU_ACDC(double acAmplitude, double acFrequency);
+
+    void turnOn();
+    void turnOff();
+    double getDCOutput(double time) const;  // Get DC output at a given time
+
+private:
+    ACPowerSource acSource;
+    Rectifier rectifier;
+    Capacitor smoothingCap;
+    Switch powerSwitch;
+    bool isOn;
+};
+</code></pre>
+
+<h2>Constructor</h2>
+<ul>
+    <li><strong>PSU_ACDC</strong>: Initializes the PSU with an AC power source, rectifier, and smoothing capacitor.</li>
+</ul>
+
+<h2>Methods</h2>
+<ul>
+    <li><strong>turnOn</strong>: Turns on the PSU, allowing it to convert AC to DC.</li>
+    <li><strong>turnOff</strong>: Turns off the PSU.</li>
+    <li><strong>getDCOutput(double time)</strong>: Returns the DC output at a given time, after rectification and smoothing.</li>
+</ul>
+
+<h2>Usage Example</h2>
+<pre><code>
+PSU_ACDC psu(230, 50);  // 230V AC, 50Hz
+psu.turnOn();
+double dcOutput = psu.getDCOutput(0.02);  // Get DC output at time 0.02s
+</code></pre>
+
+<h2>Behavior</h2>
+<p>The PSU takes an AC input, converts it to DC using a rectifier, and smooths the output using a capacitor. It is typically used in circuits where stable DC voltage is required from an AC power source.</p>
+
+</body>
+</html>

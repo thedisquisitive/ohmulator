@@ -3,56 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmulator: Switch Component</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        pre {
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-        }
-    </style>
+    <title>Switch - Ohmulator Documentation</title>
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>Switch Component</h1>
+<div class="container">
+    <header>
+        <h1>Switch</h1>
+        <p>A switch controls the flow of current in a circuit by opening or closing the circuit path.</p>
+    </header>
 
-<p>The <strong>Switch</strong> class simulates an on/off switch, which either allows or blocks current based on its state.</p>
+    <section>
+        <h2>Overview</h2>
+        <p>Switches are used to control whether or not current flows through a circuit. The state of the switch (on/off) determines the connectivity of the circuit.</p>
+    </section>
 
-<h2>Class Definition</h2>
-<pre><code>
-class Switch : public Component {
-public:
-    Switch(bool initialState = false);
-    void setState(bool state);
-    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
-    double output() const override;
-    std::string visualize() const override;
-    std::string getName() const override;
+    <section>
+        <h2>Parameters</h2>
+        <ul>
+            <li><strong>Initial State:</strong> The starting state of the switch (on/off).</li>
+        </ul>
+    </section>
 
-private:
-    bool state;
-    double outputVoltage;
-};
-</code></pre>
+    <section>
+        <h2>Methods</h2>
+        <ul>
+            <li><code>setState(bool state)</code></li>
+            <li><code>applyVoltages(double inputVoltage, double groundVoltage)</code></li>
+            <li><code>output() const</code></li>
+            <li><code>visualize() const</code></li>
+            <li><code>getName() const</code></li>
+        </ul>
+    </section>
 
-<h2>Methods</h2>
-<ul>
-    <li><strong>setState</strong>: Changes the state of the switch (on/off).</li>
-    <li><strong>applyVoltages</strong>: Allows or blocks current depending on the state of the switch.</li>
-    <li><strong>visualize</strong>: Provides a string representation of whether the switch is on or off.</li>
-</ul>
+    <section>
+        <h2>Example</h2>
+        <pre><code>
+// Create a switch that starts in the off position
+Switch sw(false);
+circuit.addComponent(&sw);
+sw.setState(true); // Turn on the switch
+std::cout << "Output: " << sw.output() << std::endl;
+        </code></pre>
+    </section>
+
+    <footer>
+        <p><a href="../index.html">Back to Documentation</a></p>
+    </footer>
+</div>
 
 </body>
 </html>

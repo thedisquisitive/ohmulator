@@ -3,56 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ohmulator: LED Component</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        pre {
-            background-color: #272822;
-            color: #f8f8f2;
-            padding: 10px;
-            border-radius: 5px;
-            overflow-x: auto;
-            white-space: pre-wrap;
-        }
-    </style>
+    <title>LED - Ohmulator Documentation</title>
+    <link href="../css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<h1>LED Component</h1>
+<div class="container">
+    <header>
+        <h1>LED</h1>
+        <p>An LED emits light when a current flows through it in the forward direction.</p>
+    </header>
 
-<p>The <strong>LED</strong> class simulates a light-emitting diode. It emits light when forward biased and the input voltage exceeds its forward voltage.</p>
+    <section>
+        <h2>Overview</h2>
+        <p>LEDs are commonly used in circuits as indicators or for lighting. They allow current to pass in one direction and emit light when forward-biased.</p>
+    </section>
 
-<h2>Class Definition</h2>
-<pre><code>
-class LED : public Component {
-public:
-    LED(double forwardVoltage);
-    void applyVoltages(double inputVoltage, double groundVoltage = 0) override;
-    double output() const override;
-    std::string visualize() const override;
-    std::string getName() const override;
+    <section>
+        <h2>Parameters</h2>
+        <ul>
+            <li><strong>Forward Voltage:</strong> The voltage needed for the LED to emit light.</li>
+        </ul>
+    </section>
 
-private:
-    double forwardVoltage;
-    bool lit;
-    double current;
-};
-</code></pre>
+    <section>
+        <h2>Methods</h2>
+        <ul>
+            <li><code>applyVoltages(double inputVoltage, double groundVoltage)</code></li>
+            <li><code>output() const</code></li>
+            <li><code>visualize() const</code></li>
+            <li><code>getName() const</code></li>
+        </ul>
+    </section>
 
-<h2>Methods</h2>
-<ul>
-    <li><strong>applyVoltages</strong>: Simulates the LED behavior, turning it on if the forward voltage is exceeded.</li>
-    <li><strong>output</strong>: Returns the current through the LED.</li>
-    <li><strong>visualize</strong>: Provides a string representation of whether the LED is lit.</li>
-</ul>
+    <section>
+        <h2>Example</h2>
+        <pre><code>
+// Create an LED with a forward voltage of 1.8V
+LED led(1.8);
+circuit.addComponent(&led);
+std::cout << "Output: " << led.output() << std::endl;
+        </code></pre>
+    </section>
+
+    <footer>
+        <p><a href="../index.html">Back to Documentation</a></p>
+    </footer>
+</div>
 
 </body>
 </html>
