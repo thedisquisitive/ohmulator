@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -107,10 +107,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -133,7 +133,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -155,10 +155,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -181,7 +181,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -203,10 +203,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -229,7 +229,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -250,10 +250,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>

@@ -69,7 +69,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -79,7 +79,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -89,7 +89,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -99,7 +99,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <Midl>
-      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Projects\ohmulator\include;C:\Projects\ohmulator\include\components;C:\Projects\ohmulator\include\core;C:\Projects\ohmulator\include\utils;C:\Projects\ohmulator\include\components\logic;C:\Projects\ohmulator\include\components\common;C:\Projects\ohmulator\include\components\uncommon;C:\Projects\ohmulator\include\components\powersource;C:\Projects\ohmulator\include\components\magnetic;\mingw64\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>

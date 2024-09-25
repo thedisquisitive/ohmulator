@@ -1,0 +1,150 @@
+├───doc
+│   │   conduct.html
+│   │   index.html
+│   │
+│   ├───code
+│   │   └───core
+│   │           ComponentFactory.html
+│   │
+│   ├───Components
+│   │       ACPowerSource.html
+│   │       AlkalineBattery.html
+│   │       Battery.html
+│   │       Capacitor.html
+│   │       Diode.html
+│   │       Inductor.html
+│   │       LED.html
+│   │       LemonBattery.html
+│   │       LithiumBattery.html
+│   │       MagneticField.html
+│   │       NiCadBattery.html
+│   │       PickupCoil.html
+│   │       PotatoBattery.html
+│   │       Potentiometer.html
+│   │       PSU_ACDC.html
+│   │       Rectifier.html
+│   │       Resistor.html
+│   │       Switch.html
+│   │       Transistor.html
+│   │       VibratingString.html
+│   │       Wire.html
+│   │
+│   ├───css
+│   │       style.css
+│   │
+│   └───tutorial
+│       │   index.html
+│       │
+│       ├───Adding Components
+│       │       index.html
+│       │
+│       └───Building a PSU
+│               index.html
+│
+├───include
+│   ├───components
+│   │   ├───common
+│   │   │       Capacitor.h
+│   │   │       Diode.h
+│   │   │       Inductor.h
+│   │   │       LED.h
+│   │   │       Potentiometer.h
+│   │   │       Rectifier.h
+│   │   │       Resistor.h
+│   │   │       Switch.h
+│   │   │       Transistor.h
+│   │   │       Wire.h
+│   │   │
+│   │   ├───logic
+│   │   │       AndGate.h
+│   │   │       BufferGate.h
+│   │   │       HalfAdder.h
+│   │   │       NandGate.h
+│   │   │       NorGate.h
+│   │   │       NotGate.h
+│   │   │       OrGate.h
+│   │   │       SchmittTrigger.h
+│   │   │       TriStateBuffer.h
+│   │   │       XnorGate.h
+│   │   │       XorGate.h
+│   │   │
+│   │   ├───magnetic
+│   │   │       MagneticField.h
+│   │   │       PickupCoil.h
+│   │   │
+│   │   ├───powersource
+│   │   │       ACPowerSource.h
+│   │   │       AlkalineBattery.h
+│   │   │       Battery.h
+│   │   │       LemonBattery.h
+│   │   │       LithiumBattery.h
+│   │   │       NiCadBattery.h
+│   │   │       PotatoBattery.h
+│   │   │       PSU_ACDC.h
+│   │   │
+│   │   └───uncommon
+│   │           VibratingString.h
+│   │
+│   ├───core
+│   │       Circuit.h
+│   │       Component.h
+│   │       ComponentFactory.h
+│   │
+│   └───utils
+│           Logger.h
+│           MathUtils.h
+│
+├───src
+│   │   main.cpp
+│   │
+│   ├───components
+│   │   ├───common
+│   │   │       Capacitor.cpp
+│   │   │       Diode.cpp
+│   │   │       Inductor.cpp
+│   │   │       LED.cpp
+│   │   │       Potentiometer.cpp
+│   │   │       Rectifier.cpp
+│   │   │       Resistor.cpp
+│   │   │       Switch.cpp
+│   │   │       Transistor.cpp
+│   │   │       Wire.cpp
+│   │   │
+│   │   ├───logic
+│   │   │       AndGate.cpp
+│   │   │       BufferGate.cpp
+│   │   │       HalfAdder.cpp
+│   │   │       NandGate.cpp
+│   │   │       NorGate.cpp
+│   │   │       NotGate.cpp
+│   │   │       OrGate.cpp
+│   │   │       SchmittTrigger.cpp
+│   │   │       TriStateBuffer.cpp
+│   │   │       XnorGate.cpp
+│   │   │       XorGate.cpp
+│   │   │
+│   │   ├───magnetic
+│   │   │       MagneticField.cpp
+│   │   │       PickupCoil.cpp
+│   │   │
+│   │   ├───powersource
+│   │   │       ACPowerSource.cpp
+│   │   │       AlkalineBattery.cpp
+│   │   │       Battery.cpp
+│   │   │       LemonBattery.cpp
+│   │   │       LithiumBattery.cpp
+│   │   │       NiCadBattery.cpp
+│   │   │       PotatoBattery.cpp
+│   │   │       PSU_ACDC.cpp
+│   │   │
+│   │   └───uncommon
+│   │           VibratingString.cpp
+│   │
+│   ├───core
+│   │       Circuit.cpp
+│   │       Component.cpp
+│   │       ComponentFactory.cpp
+│   │
+│   └───utils
+│           Logger.cpp
+│           MathUtils.cpp

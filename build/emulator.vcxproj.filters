@@ -1,40 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Capacitor.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\buttons\NC_LatchingButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Diode.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\buttons\NC_MomentaryButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Inductor.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\buttons\NO_LatchingButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\LED.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\buttons\NO_MomentaryButton.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\MagneticField.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Capacitor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\PickupCoil.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Diode.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Potentiometer.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Inductor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Resistor.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\LED.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Switch.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Potentiometer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Transistor.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Rectifier.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\VibratingString.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Resistor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Projects\ohmulator\src\components\Wire.cpp">
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Switch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\common\Transistor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\connectors\Pin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\connectors\Trace.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\connectors\Wire.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\ic\IC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\AndGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\BufferGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\HalfAdder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\NandGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\NorGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\NotGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\OrGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\SchmittTrigger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\TriStateBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\XnorGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\logic\XorGate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\magnetic\MagneticField.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\magnetic\PickupCoil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\ACPowerSource.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\AlkalineBattery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\Battery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\LemonBattery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\LithiumBattery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\NiCadBattery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\PSU_ACDC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\powersource\PotatoBattery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Projects\ohmulator\src\components\uncommon\VibratingString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Projects\ohmulator\src\core\Circuit.cpp">
